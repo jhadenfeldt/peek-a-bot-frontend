@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Peek-a-Bot | A Screenshot Bot for Slack</title>
+    <link rel="stylesheet" type="text/css" href="./components/reset.css">
+    <link rel="stylesheet" type="text/css" href="./components/site.css">
+
+    <link rel="stylesheet" type="text/css" href="./components/container.css">
+    <link rel="stylesheet" type="text/css" href="./components/grid.css">
+    <link rel="stylesheet" type="text/css" href="./components/header.css">
+    <link rel="stylesheet" type="text/css" href="./components/image.css">
+    <link rel="stylesheet" type="text/css" href="./components/menu.css">
+    <link rel="stylesheet" type="text/css" href="./components/item.css">
+    <link rel="stylesheet" type="text/css" href="./components/comment.css">
+
+    <link rel="stylesheet" type="text/css" href="./components/segment.css">
+    <link rel="stylesheet" type="text/css" href="./components/button.css">
+    <link rel="stylesheet" type="text/css" href="./components/list.css">
+    <link rel="stylesheet" type="text/css" href="./components/icon.css">
+
+    <style type="text/css">
+
+        .masthead.segment {
+            min-height: 400px;
+            padding: 1em 0;
+        }
+
+        .masthead h1.ui.header {
+            margin-top: 0.25em;
+            margin-bottom: 1em;
+            font-size: 3em;
+            font-weight: normal;
+        }
+
+        .desktop {
+            display: none!important;
+        }
+
+        @media only screen and (min-width: 768px){
+            .masthead h1.ui.header {
+                margin-top: 1em;
+            }
+
+            .column.desktop {
+                display: inline-block!important;
+            }
+        }
+
+        @media only screen and (min-width: 991px){
+            .masthead h1.ui.header {
+                font-size: 4em;
+            }
+        }
+
+        .ui.vertical.stripe {
+            padding: 8em 0;
+        }
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .footer.segment {
+            padding: 5em 0;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<!-- Page Contents -->
+<div class="pusher">
+    <div class="ui vertical masthead aligned segment">
+        <div class="ui container">
+            <div class="ui large secondary menu">
+                <a class="item" href="/"><img class="ui top aligned mini image" src="./themes/peekabot/assets/images/peek-a-bot_icon.svg"> Peek-a-Bot</a>
+            </div>
+        </div>
+
+        <div class="ui grid container stage stackable">
+            <div class="six wide column">
+                <div class="ui text">
+                    <h1 class="ui header">
+                        Create Website Screenshots from Slack
+                    </h1>
+                    <a href="https://slack.com/oauth/authorize?scope=bot&client_id=323089364727.322021247571" class="ui huge primary button"><i class="slack hash icon"></i> Add me to Slack</a>
+                </div>
+            </div>
+            <div class="ten wide column desktop">
+                <div class="ui comments">
+                    <div class="comment right">
+                        <a class="avatar">
+                            <img src="./themes/peekabot/assets/images/peek-a-bot_icon-user.svg">
+                        </a>
+                        <div class="content">
+                            <span class="author">Sebastian</span>
+                            <div class="metadata">
+                                <span class="date">10:10 AM</span>
+                            </div>
+                            <div class="text">
+                                /peek slack.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="./themes/peekabot/assets/images/peek-a-bot_icon.svg">
+                        </a>
+                        <div class="content">
+                            <span class="author">Peek-a-bot</span>
+                            <span class="app">APP</span>
+                            <div class="metadata">
+                                <span class="date">10:10 AM</span>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    Please wait a second while I'm generating the screenshot.<br>
+                                </p>
+                                <p>
+                                    Here you go:
+                                </p>
+                                <div class="attachment">
+                                    <a href="http://slack.com" target="_blank">http://slack.com</a> <span>(100 kB)</span>
+                                    <img class="ui rounded bordered image" src="./themes/peekabot/assets/images/screenshot.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui vertical stripe segment primary">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="sixteen wide column">
+                    <h3 class="ui header">What else can I do?</h3>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="five wide column">
+                    <h4 class="ui header">Capture full-page screenshots:</h4>
+                    <pre>/peek slack.com all</pre>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui header">Understand custom resolutions:</h4>
+                    <pre>/peek slack.com 800 600</pre>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui header">Capture screenshots from https:</h4>
+                    <pre>/peek https://slack.com/apps</pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ui vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable divided equal height stackable grid">
+                <div class="sixteen wide column">
+                    <h4 class="ui header">About</h4>
+                    <div class="ui link list">
+                        <a href="https://github.com/jhadenfeldt/peek-a-bot" class="item" target="_blank"><i class="github icon"></i> Find the Source on GitHub</a>
+                        <a href="https://github.com/jhadenfeldt/peek-a-bot/issues" class="item" target="_blank"><i class="bug icon"></i> Report an Issue</a>
+                        <a href="https://jan-hadenfeldt.de" class="item" target="_blank"><i class="code icon"></i> built by Jan Hadenfeldt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115366948-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115366948-1');
+</script>
+</body>
+
+</html>

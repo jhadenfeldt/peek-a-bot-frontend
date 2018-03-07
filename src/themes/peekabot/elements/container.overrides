@@ -1,0 +1,6 @@
+.ui.container {
+  &.stage {
+    margin-top: 2em!important;
+    margin-bottom: 2em!important;
+  }
+}

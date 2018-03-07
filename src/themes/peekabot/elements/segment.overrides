@@ -1,0 +1,11 @@
+/*******************************
+           Overrides
+*******************************/
+
+.ui.segment.primary {
+  background: #6f21ff;
+
+  &, .header {
+    color: #fff !important;
+  }
+}

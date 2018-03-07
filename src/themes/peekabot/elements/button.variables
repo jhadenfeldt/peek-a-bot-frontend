@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@pageFont: Roboto, sans-serif;
+@textTransform: none;
+@textColor: #fff;
+@fontWeight: normal;
+@transition:
+        opacity @defaultDuration @defaultEasing,
+        background-color @defaultDuration @defaultEasing,
+        color @defaultDuration @defaultEasing,
+        background @defaultDuration @defaultEasing
+;
+
+@hoverBackgroundColor: #c40d7a !important;
+
+@borderRadius: 0;
+@verticalPadding: 0.8em;
+@horizontalPadding: 1.75em;
+
+@backgroundColor: #e90d8e!important;

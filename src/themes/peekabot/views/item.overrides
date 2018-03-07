@@ -1,0 +1,12 @@
+/*******************************
+           Overrides
+*******************************/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.item {
+    font-weight: bold!important;
+}
+
+.item .ui.image {
+    margin-right: 10px!important;
+}

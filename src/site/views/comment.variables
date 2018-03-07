@@ -1,0 +1,25 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@borderWidth: 1px;
+
+
+/* Shadow */
+@shadowDistance: 1px;
+@shadowBoxShadow: 0px @shadowDistance 3px 0px @solidBorderColor;
+
+@borderShadow: 0px 0px 0px @borderWidth @solidBorderColor;
+@boxShadow:
+  @shadowBoxShadow,
+  @borderShadow
+;
+
+/* Raised */
+@raisedShadow:
+  @borderShadow,
+  @floatingShadow
+;
+@raisedShadowHover:
+  @borderShadow,
+  @floatingShadowHover
+;

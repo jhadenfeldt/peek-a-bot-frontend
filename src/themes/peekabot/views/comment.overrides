@@ -1,0 +1,98 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+.ui.comments .comment {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 1em;
+
+    &.right {
+        .avatar {
+            float: right;
+        }
+        .content {
+            border-color: #ddd;
+
+            &:after{
+                right: calc(~"3.25em + 1px");
+                left: auto;
+                border-left: 0;
+                border-top: 15px solid #ddd;
+                border-right: 1.25em solid transparent;
+            }
+            &:before{
+                right: calc(~"3.25em + 4px");
+                left: auto;
+                border-left: 0;
+                border-top: 15px solid #fff;
+                border-right: 1.25em solid transparent;
+            }
+        }
+    }
+
+    .avatar {
+        margin: 0;
+    }
+
+    .text {
+        color: #666;
+    }
+
+    .app {
+        text-transform: uppercase;
+        background: #ddd;
+        color: #999;
+        font-size: 6px;
+        border-radius: 3px;
+        padding: 2px;
+        margin-left: 0.5em;
+        position: relative;
+        top: -2px;
+        font-weight: bold;
+    }
+
+
+    .attachment {
+        border-left: 4px solid #ddd;
+        padding-left: 1em;
+
+        .image {
+            margin-top: 0.75em;
+        }
+    }
+
+    .content {
+        padding: 1em 1.25em 0.75em;
+        margin-right: 4.5em;
+        margin-left: 4.5em!important;
+        background: #fff;
+        border: 1px solid #6f21ff;
+
+        &:after{
+            position: absolute;
+            left: calc(~"3.25em + 1px");
+            width: 0;
+            height: 0;
+            content: "";
+            display: block;
+            top: 0;
+            border-top: 15px solid #6f21ff;
+            border-left: 1.25em solid transparent;
+            z-index: 1;
+        }
+        &:before{
+            position: absolute;
+            left: calc(~"3.25em + 4px");
+            width: 0;
+            height: 0;
+            content: "";
+            display: block;
+            top: 1px;
+            border-top: 15px solid #fff;
+            border-left: 1.25em solid transparent;
+            z-index: 2;
+        }
+    }
+}
