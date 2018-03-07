@@ -21,7 +21,7 @@ var
 module.exports = function(callback) {
 
     // copy html
-    return gulp.src('src/**.html')
+    return gulp.src(['src/**.html', 'src/**.png', 'src/**.ico', 'src/**.svg', 'src/**.webmanifest'])
         .pipe(replace('./dist/', './'))
         .pipe(gulp.dest(output.packaged))
         ;
