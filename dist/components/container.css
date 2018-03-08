@@ -137,6 +137,12 @@
   margin-top: 2em!important;
   margin-bottom: 2em!important;
 }
+.ui.container.stage small {
+  color: #aaa;
+  position: relative;
+  top: 1em;
+  line-height: 1;
+}
 
 
 /*******************************

@@ -5106,6 +5106,13 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   margin-bottom: 2em!important;
 }
 
+.ui.container.stage small {
+  color: #aaa;
+  position: relative;
+  top: 1em;
+  line-height: 1;
+}
+
 /*******************************
          Site Overrides
 *******************************/
