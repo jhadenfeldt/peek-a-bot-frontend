@@ -9,7 +9,7 @@ var
     chmod        = require('gulp-chmod'),
     gulpif       = require('gulp-if'),
     replace      = require('gulp-replace'),
-
+    merge        = require('merge-stream'),
     // config
     config       = require('../../tasks/config/user'),
 
@@ -19,11 +19,11 @@ var
 ;
 
 module.exports = function(callback) {
-
-    // copy html
-    return gulp.src(['src/**.html', 'src/**.png', 'src/**.ico', 'src/**.svg', 'src/**.webmanifest'])
-        .pipe(replace('./dist/', './'))
-        .pipe(gulp.dest(output.packaged))
-        ;
+    return merge(
+        gulp.src(['src/**.png', 'src/**.ico', 'src/**.svg', 'src/**.webmanifest'])
+            .pipe(gulp.dest(output.packaged)),
+        gulp.src(['src/**.html'])
+            .pipe(replace('./dist/', './'))
+            .pipe(gulp.dest(output.packaged)));
 
 };
